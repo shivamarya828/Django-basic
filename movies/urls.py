@@ -20,5 +20,11 @@ from movies import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('movies/', views.movies),
-    path('', views.homepage)
+    path('', views.homepage),
+    path('movies/<int:id>', views.details),
+    path('movies/add', views.add),
+    path('movies/delete/<int:id>', views.delete),
+    path('movies/update/<int:id>', views.update),
+    path('movies/deleted', views.deleted),
+    path('movies/deleted/<int:id>', views.restore)
 ]
