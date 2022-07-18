@@ -1,6 +1,10 @@
-<form action = '/movies/update/{{movie.id}}' method="POST"> 
-    {% csrf_token %}
-    <input type="text" name="title" id="title" placeholder="Title">
-    <input type="text" name="year" id="year" placeholder="Year">
-    <input type="submit" value="submit">
-</form>
+{% extends 'movies/base.html' %}
+
+{% block body %}
+    <form action = '/movies/update/{{movie.id}}' method="POST"> 
+        {% csrf_token %}
+        <input type="text" name="title" id="title" placeholder="Title">
+        <input type="text" name="year" id="year" placeholder="Year">
+        <input type="submit" value="submit">
+    </form>
+{% endblock %}

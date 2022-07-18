@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'movies/base.html' %}
+
+{% block head %}
     <title>This page will take you to the list of movies you have watched</title>
-</head>
-<body>
+{% endblock %}
+
+{% block body %}
     <a href="/movies">Movies List</a>
-</body>
-</html>
+{% endblock %}

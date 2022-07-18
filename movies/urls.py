@@ -26,5 +26,8 @@ urlpatterns = [
     path('movies/delete/<int:id>', views.delete),
     path('movies/update/<int:id>', views.update),
     path('movies/deleted', views.deleted),
-    path('movies/deleted/<int:id>', views.restore)
+    path('movies/deleted/<int:id>', views.restore),
+    path('movies/popular/<title>', views.popular), 
+    path('movies/deleted/permanent', views.permanent),
+    path('movies/deleted/permanent/<int:id>', views.delete_permanent)
 ]

@@ -4,7 +4,7 @@
     <title>Details related to {{movie.title}}</title>
 {% endblock %}
 
-{% block body %}
+{%block body  %}
     <h3>Following sections contains basic details related to your favourite movie</h3>
     <!--{{movie}}-->
     <ul>
@@ -15,7 +15,4 @@
         <li>Original Language: <b>{{movie.original_language}}</b></li>
         <li>Average Rating: <b>{{movie.vote_average}}</b></li>
     </ul>
-    <br>
-    <a href="/movies/delete/{{movie.id}}">Delete</a>
-    <a href="/movies/update/{{movie.id}}">Update</a>
 {% endblock %}

@@ -1,19 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'movies/base.html' %}
+
+
+{% block head %}
     <title>Movies</title>
-</head>
-<body>
-    <h1>Movies</h1>
-    <ul>
-        {% for movie in movies %}
-            <li><a href={{movie.id}}>{{movie.title}}</a></li>
-        {% endfor %}
-    </ul>
-    <a href="/movies/add">Add a movie</a>
-    <a href="/movies/deleted">View deleted movies</a>
-</body>
-</html>
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h2>Your watchlist</h2>
+        <ul>
+            {% for movie in movies %}
+                <li><a href={{movie.id}}>{{movie.title}}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="/movies/add"><button>Add a movie</button></a>
+        <a href="/movies/deleted"><button>View deleted movies</button></a>
+    </div>
+    <div>
+        <h2>Top Movies which the viewers like</h2>
+        <ul>
+            {% for p in popular %}
+                <li><a href="popular/{{p.title}}">{{p.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

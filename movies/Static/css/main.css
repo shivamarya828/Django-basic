@@ -1,0 +1,30 @@
+body, html {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(255, 255, 255);
+}
+
+
+button {
+    border: 0;
+    border-radius: 0.25rem;
+    background: #000000;
+    color: white;
+    font-family: -system-ui, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.content {
+    margin: 0 auto;
+    width: 1400px;
+}
+
+#content {
+    width: 70%;
+}

@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'movies/base.html' %}
+
+{% block head %}
     <title>Deleted Movies</title>
-</head>
-<body>
+{% endblock %}
+
+{% block body %}
     <h1>Deleted Movies :(</h1>
     {% if data|length == 0 %}
     <h3>OMG! You like every movie which you have seen.</h3>
@@ -15,6 +13,7 @@
     {% for m in data %}
         <li><a href="deleted/{{m.id}}">{{m.title}}</a></li>
     {% endfor %}
+    <a href="/movies/deleted/permanent"><button>Permanently delete movies</button></a>
     {% endif %}
-</body>
-</html>
+    <a href="/movies"><button>Head back to see your favourite set of movies</button></a>
+{% endblock %}

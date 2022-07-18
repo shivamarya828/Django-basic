@@ -1,0 +1,10 @@
+{% extends 'movies/base.html' %}
+
+
+{% block body %}
+    <h3>Click on the movie which you want to be deleted permanently. There are no undos here!</h3>
+    {% for m in data %}
+        <li><a href="/movies/deleted/permanent/{{m.id}}">{{m.title}}</a></li>
+    {% endfor %}
+    <a href="/movies"><button>Head back to see your favourite set of movies</button></a>
+{% endblock %}
